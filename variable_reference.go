@@ -1,33 +1,34 @@
 package main
 
-import "fmt"
+import (
+    "fmt"
+)
 
 func main() {
-    var name string ="Joe Jonas"
-    var age int =27
+	var name string = "Joe Jonas"
+	var age int = 27
 
-    fmt.Println(name, "is",  age)
+	fmt.Println(name, "is", age)
 
-    changeName(name)
+	changeName(name)
 
-    fmt.Println(name, "is",  age)
+	fmt.Println(name, "is", age)
 
-    realChangeName(&name)
+	realChangeName(&name)
 
-    fmt.Println(name, "is",  age)
+	fmt.Println(name, "is", age)
 }
 
 func changeName(name string) {
-    name = "Doof Jordan"
+	name = "Doof Jordan"
 
-    fmt.Println(name, "has changed")
+	fmt.Println(name, "has changed")
 }
 
-
 func realChangeName(name *string) string {
-    *name = "Doof Jordan"
+	*name = "Doof Jordan"
 
-    fmt.Println(*name, "has changed")
+	fmt.Println(*name, "has changed")
 
-    return *name
+	return *name
 }
