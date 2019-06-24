@@ -1,7 +1,8 @@
 package main
 
 import (
-    "fmt"
+	"fmt"
+	"os"
 )
 
 func main() {
@@ -22,13 +23,13 @@ func main() {
 func changeName(name string) {
 	name = "Doof Jordan"
 
-	fmt.Println(name, "has changed")
+	fmt.Println(name, "has changed names")
 }
 
 func realChangeName(name *string) string {
-	*name = "Doof Jordan"
+	*name = os.Getenv("USER")
 
-	fmt.Println(*name, "has changed")
+	fmt.Println(*name, "has changed names")
 
 	return *name
 }
