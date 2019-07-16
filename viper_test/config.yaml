@@ -1,0 +1,6 @@
+auth:
+  username: black
+  password: notthere
+port: 9090
+hostname: localhost
+
